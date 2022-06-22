@@ -25,7 +25,7 @@ import static com.diff.core.Common.Code.*;
  */
 public class FileTreeUtil {
     /**
-     *
+     * 对比两个项目的所有pom.xml，得到新增的子模块和非新增的子模块，不关注删除的模块
      * @param oldProject
      * @param newProject
      * @return
@@ -110,7 +110,7 @@ public class FileTreeUtil {
     }
 
     /**
-     * [完整目录]
+     * 获取目录下所有文件的完整路径
      * @param dirPath
      * @return
      * @throws NotDirectoryException
@@ -146,7 +146,7 @@ public class FileTreeUtil {
     }
 
     /**
-     * 比较两个文件夹的目录结构
+     * 比较两个文件夹的目录结构，得到所有被修改、新增的文件和文件夹
      * @param oldPath   旧路径，需要传入完整路径
      * @param newPath   新路径，需要传入完整路径
      * @return  只会记录新建的java文件、修改的java文件以及新建的文件夹，不会返回删除的内容
