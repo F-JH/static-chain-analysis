@@ -24,10 +24,6 @@ import static com.diff.core.Common.Code.*;
  * 文件结构树工具
  */
 public class FileTreeUtil {
-    public static void main(String[] args) throws Exception {
-        System.out.println(JSONObject.toJSONString(compireToPomTree("/Users/xiaoandi/github/qqbot/qqbot","/Users/xiaoandi/github/qqbot/diff_test/qqbot")));
-    }
-
     /**
      *
      * @param oldProject
@@ -185,7 +181,7 @@ public class FileTreeUtil {
                     String topItemPath = topItem.relativePath.append(URL_SPLIT).append(fileName).toString();
                     File oldFile = new File(oldPath + topItemPath);
                     if(oldFile.exists()){
-                        if(!Arrays.equals(getFileBytes(oldFile), getFileBytes(topItem.fileNode)))
+                        if(oldFile.length() != topItem.fileNode.length() || !Arrays.equals(getFileBytes(oldFile), getFileBytes(topItem.fileNode)))
                             modifyFiles.add(topItemPath);
                     }else{
                         newFiles.add(topItemPath);
