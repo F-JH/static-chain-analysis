@@ -22,14 +22,6 @@ public class XmlDiffUtils {
         root = document.getRootElement();
     }
 
-
-    public static void main(String[] args) throws DocumentException {
-        SAXReader reader = new SAXReader();
-        String oldFile =  "/Users/xiaoandi/github/shopline-jdp/shopline-cloud-service-user-center-copy/src/main/resources/mapper/BusinessGroupMapper.xml";
-        String newFile = "/Users/xiaoandi/github/shopline-jdp/shopline-cloud-service-user-center-copy/BusinessGroupMapper.xml";
-        System.out.println(JSONObject.toJSONString(compireXml(oldFile, newFile)));
-    }
-
     /**
      * 只记录有修改的，新增、删除的不记录，因为这种在代码层面已经会被记录
      * @param oldFile
