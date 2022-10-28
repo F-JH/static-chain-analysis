@@ -25,10 +25,11 @@
 
 ```
 {
-  "oldProjectPath": "旧项目根路径",
-  "newProjectPath": "新项目根路径",
+  "oldProjectPath": "/Users/xiaoandi/github/qqbot/qqbot",
+  "newProjectPath": "/Users/xiaoandi/github/qqbot/diff_test/qqbot",
   "source": "src/main/java",
-  "target": "target/classes"
+  "target": "target/classes",
+  "resources": "src/main/resources"
 }
 ```
 
@@ -36,6 +37,9 @@
 
 * oldProjectPath填master分支的路径（会自动检索项目下的所有子模块）;
 * newProjectPath填dev分支的路径（同上）
+* source：代码路径，不用改
+* target：maven编译出来的路径，不用改
+* resources：资源路径，不用改
 * 编译newProjectPath项目，得到target（需要把所有子模块全部编译，oldProject不需要编译）
 * 运行 main 即可得到结果
 * 如果要打包，执行mvn命令：[mvn assembly:assembly] 得到 `static-chain-analysis-1.0-SNAPSHOT-jar-with-dependencies.jar`
