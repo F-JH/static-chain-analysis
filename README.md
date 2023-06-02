@@ -53,6 +53,7 @@
 * [X]  支持dubbo接口的调用链（从注解）
 * [ ]  支持dubbo接口的调用链（从xml）
 * [ ]  支持SpringCloud的rpc接口
+* [X]  为这个垃圾工具增加了一个web页面，可手动选择分支以及精确到具体的commitId来分析[static-chain-analysis-web](https://github.com/F-JH/static-chain-analysis-web)
 
 ##### 效果图如下：
 
